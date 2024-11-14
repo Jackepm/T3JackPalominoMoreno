@@ -43,5 +43,19 @@ namespace Gestiondecitasmedicas
             double sumaPrecios = citas.Sum(c => c.precio);
             Console.WriteLine($"Suma de todos los precios: {sumaPrecios}");
         }
+        public static void ModificarMasivo(List<Cita> citas)
+        {
+            Console.Write("Texto a buscar: ");
+            string textoBuscar = Console.ReadLine();
+
+            Console.Write("Texto para reemplazar: ");
+            string textoReemplazo = Console.ReadLine();
+
+            foreach (var cita in citas)
+            {
+                cita.estudiante.universidad = cita.estudiante.universidad.Replace(textoBuscar, textoReemplazo);
+            }
+            Console.WriteLine("Modificación masiva realizada con éxito");
+        }
     }
 }
