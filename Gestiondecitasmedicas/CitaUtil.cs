@@ -33,5 +33,15 @@ namespace Gestiondecitasmedicas
             citas.Add(new Cita(numero, estudiante, enfermedad, precio));
             Console.WriteLine("Cita creada con éxito");
         }
+
+        public static void ListarCitas(List<Cita> citas)
+        {
+            foreach (var cita in citas)
+            {
+                Console.WriteLine(cita);
+            }
+            double sumaPrecios = citas.Sum(c => c.precio);
+            Console.WriteLine($"Suma de todos los precios: {sumaPrecios}");
+        }
     }
 }

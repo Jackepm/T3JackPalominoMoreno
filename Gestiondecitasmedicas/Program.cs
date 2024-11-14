@@ -20,13 +20,13 @@ class Program
             switch (opcion)
             {
                 case "1":
-                    
+                    CitaUtil.CrearCita(citas);
                     break;
                 case "2":
-                    
+                    CitaUtil.ListarCitas(citas);
                     break;
                 case "3":
-                    
+                    CitaUtil.ModificarMasivo(citas);
                     break;
                 case "4":
                     return;
