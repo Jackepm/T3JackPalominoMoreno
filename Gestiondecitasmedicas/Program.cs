@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Gestiondecitasmedicas;
+using System;
 using System.Collections.Generic;
 
 class Program
 {
+    static List<Cita> citas = new List<Cita>();
+
     static void Main(string[] args)
     {
         while (true)
